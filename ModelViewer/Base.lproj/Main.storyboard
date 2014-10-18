@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IBP-r4-Rf1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--GLKit View Controller-->
+        <scene sceneID="teU-6r-xXD">
+            <objects>
+                <glkViewController preferredFramesPerSecond="30" id="IBP-r4-Rf1" customClass="ModelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="18G-eL-yIm"/>
+                        <viewControllerLayoutGuide type="bottom" id="HKZ-bc-xUz"/>
+                    </layoutGuides>
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="4JX-cO-U4d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outlet property="delegate" destination="IBP-r4-Rf1" id="ov4-Kq-l1i"/>
+                            <outletCollection property="gestureRecognizers" destination="jKv-jg-bAk" appends="YES" id="a7C-1r-R3x"/>
+                            <outletCollection property="gestureRecognizers" destination="TUo-PA-csz" appends="YES" id="aTK-HP-0z1"/>
+                        </connections>
+                    </glkView>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Yd-wP-2ie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="jKv-jg-bAk">
+                    <connections>
+                        <action selector="pan:" destination="IBP-r4-Rf1" id="csd-0O-2C4"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="TUo-PA-csz">
+                    <connections>
+                        <action selector="pinch:" destination="IBP-r4-Rf1" id="3D4-yD-1YF"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="369" y="5"/>
+        </scene>
+    </scenes>
+</document>
